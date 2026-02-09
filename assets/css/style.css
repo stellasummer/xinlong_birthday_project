@@ -9,9 +9,9 @@
 body {
   background: linear-gradient(
     180deg,
-    #f6f3ef 0%,
-    #f1d7aa 80%,
-    #f79329 100%
+    #dcae72 0%,
+    #de9a25 60%,
+    #000000 100%
   );
   color: #333;
   line-height: 1.7;
@@ -151,3 +151,4 @@ body {
 .dot.active {
   background: #fff;
 }
+
