@@ -5,6 +5,8 @@
   <title>XINLONG · Birthday Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
 </head>
 <body>
 
@@ -45,10 +47,22 @@
 
 </section>
 
+  <section class="video-blessing">
+  <div class="video-wrapper">
+    <video
+      src="assets/video/celebration.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+  </div>
+  </section>
+
 
   <!-- Message Section -->
   <section class="section">
-    <h2>💌 Messages</h2>
+    <h2>Messages💌</h2>
     <p class="hint">Leave your wishes from anywhere in the world.</p>
     <!-- Giscus will be inserted here -->
     <script src="https://giscus.app/client.js"
@@ -61,29 +75,172 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="transparent_dark"
+        data-theme="noborder_light"
         data-lang="en"
         crossorigin="anonymous"
         async>
     </script>
   </section>
 
-  <!-- Video Section -->
-  <section class="section">
-    <h2>🎬 Video Tribute</h2>
-    <p class="hint">Watch on Bilibili</p>
-  </section>
+<section class="section video-section">
+  <h2>Video Messages 🎬</h2>
+  
+  <!-- Row 1 -->
+  <div class="video-row">
+    <h3>Fan Support</h3>
+
+    <button class="video-nav prev">‹</button>
+    <button class="video-nav next">›</button>
+
+    <div class="video-track">
+      <div class="video-page">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_A" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_B" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_C" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="video-row">
+    <h3>Perfomances</h3>
+
+    <button class="video-nav prev">‹</button>
+    <button class="video-nav next">›</button>
+
+    <div class="video-track">
+      <div class="video-page">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/watch?v=z5wuHjWSaYE&list=RDz5wuHjWSaYE&start_radio=1&pp=ygUOeGlubG9uZyDliJ3op4GgBwE%3D" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/watch?v=WKhO7vc1eCQ&list=RDWKhO7vc1eCQ&start_radio=1&pp=ygUOeGlubG9uZyDliJ3op4GgBwE%3D" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/watch?v=ED7cqlqzQlk&list=RDED7cqlqzQlk&start_radio=1&pp=ygUSeGlubG9uZyBob2xhIHNvbGFyoAcB" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-page">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="video-row">
+    <h3>Memories</h3>
+
+    <button class="video-nav prev">‹</button>
+    <button class="video-nav next">›</button>
+
+    <div class="video-track">
+      <div class="video-page">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_A" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_B" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_C" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Map Section -->
-  <section class="section">
-    <h2>🌍 Love from</h2>
-    <p class="hint">Our love connects us across the world.</p>
+  <section class="section map-section">
+  <h2>Love from around the world🌍</h2>
+  <p class="hint">Fans are with you, wherever you are.</p>
+  <div id="map"></div>
   </section>
 
-  <script src="./assets/js/countdown.js"></script>
-  <script src="./assets/js/carousel.js"></script>
+
+
+<script>
+document.querySelectorAll(".video-row").forEach(row => {
+  const track = row.querySelector(".video-track");
+  const pages = row.querySelectorAll(".video-page");
+  const prev = row.querySelector(".prev");
+  const next = row.querySelector(".next");
+
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % pages.length;
+    update();
+  });
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + pages.length) % pages.length;
+    update();
+  });
+});
+</script>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Map logic -->
+<script>
+  const map = L.map("map", {
+    worldCopyJump: true,
+    minZoom: 2,
+  }).setView([20, 0], 2);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "© OpenStreetMap contributors",
+  }).addTo(map);
+
+  fetch("https://ipapi.co/json/")
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data.latitude || !data.longitude) return;
+
+      const marker = L.circleMarker(
+        [data.latitude, data.longitude],
+        {
+          radius: 3,
+          color: "#ff0000",
+          fillColor: "#ff0000",
+          fillOpacity: 0.3,
+        }
+      ).addTo(map);
+
+      marker.bindPopup(
+        `Love from ${data.city || ""} ${data.country_name || ""}`
+      );
+    })
+    .catch(() => {
+      console.log("Location unavailable");
+    });
+</script>
+
+<!-- Your own scripts -->
+<script src="./assets/js/countdown.js"></script>
+<script src="./assets/js/carousel.js"></script>
+
 
 </body>
 </html>
-
 
