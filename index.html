@@ -1,3 +1,4 @@
+<!--Head-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
 </head>
+
+
 <body>
-
-  <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="hero">
-
   <div class="carousel">
     <div class="carousel-track">
       <div class="slide">
@@ -44,25 +44,21 @@
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
-
 </section>
 
-  <section class="video-blessing">
+<!--Dynamic fonts Section-->
+<section class="video-blessing">
   <div class="video-wrapper">
     <video autoplay loop muted>
-
-
     <source src="assets/video/celebration.mp4" type="video/mp4">
-
-
-  </video>
+    </video>
   </div>
-  </section>
+</section>
 
 
-  <!-- Message Section -->
-  <section class="section">
-    <h2>Messages💌</h2>
+<!-- Message Section -->
+<section class="section">
+  <h2>Messages💌</h2>
     <p class="hint">Leave your wishes from anywhere in the world.</p>
     <!-- Giscus will be inserted here -->
     <script src="https://giscus.app/client.js"
@@ -80,8 +76,9 @@
         crossorigin="anonymous"
         async>
     </script>
-  </section>
+</section>
 
+<!--Video Section-->
 <section class="section video-section">
   <h2>Video Messages 🎬</h2>
   
@@ -164,80 +161,23 @@
   </div>
 </section>
 
-  <!-- Map Section -->
-  <section class="section map-section">
+<!-- Map Section -->
+<section class="section map-section">
   <h2>Love from around the world🌍</h2>
   <p class="hint">Fans are with you, wherever you are.</p>
   <div id="map"></div>
-  </section>
+</section>
 
+<!--Scripts-->
 
-
-<script>
-document.querySelectorAll(".video-row").forEach(row => {
-  const track = row.querySelector(".video-track");
-  const pages = row.querySelectorAll(".video-page");
-  const prev = row.querySelector(".prev");
-  const next = row.querySelector(".next");
-
-  let index = 0;
-
-  function update() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  next.addEventListener("click", () => {
-    index = (index + 1) % pages.length;
-    update();
-  });
-
-  prev.addEventListener("click", () => {
-    index = (index - 1 + pages.length) % pages.length;
-    update();
-  });
-});
-</script>
-
+<script src="./assets/js/video_row.js"></script>
 <!-- Leaflet -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <!-- Map logic -->
-<script>
-  const map = L.map("map", {
-    worldCopyJump: true,
-    minZoom: 2,
-  }).setView([20, 0], 2);
-
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "© OpenStreetMap contributors",
-  }).addTo(map);
-
-  fetch("https://ipapi.co/json/")
-    .then((res) => res.json())
-    .then((data) => {
-      if (!data.latitude || !data.longitude) return;
-
-      const marker = L.circleMarker(
-        [data.latitude, data.longitude],
-        {
-          radius: 3,
-          color: "#ff0000",
-          fillColor: "#ff0000",
-          fillOpacity: 0.3,
-        }
-      ).addTo(map);
-
-      marker.bindPopup(
-        `Love from ${data.city || ""} ${data.country_name || ""}`
-      );
-    })
-    .catch(() => {
-      console.log("Location unavailable");
-    });
-</script>
-
-<!-- Your own scripts -->
+<script src="./assets/js/map.js"></script>
+<!--Countdown logic-->
 <script src="./assets/js/countdown.js"></script>
+<!--Carousel logic-->
 <script src="./assets/js/carousel.js"></script>
 
 
