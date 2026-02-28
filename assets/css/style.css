@@ -6,6 +6,7 @@
     "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
+
 body {
   margin: 0;
   background-image: url("../img/background-3.jpg"); /* 换成你的图片路径 */
@@ -16,26 +17,32 @@ body {
 }
 .main-wrapper {
   max-width: 1000px;
-  margin: -120px auto 120px auto; /* 轻微压住 hero */
-  padding: 60px 50px;
+ 
+  margin: -60px auto 120px auto;
 
+  padding: 60px 50px;
+  z-index: 1;
   background: rgb(223,176,110);
 }
 
 /* Hero */
+
 .hero {
   position: relative;
   height: 70vh;
   min-height: 520px;
   overflow: hidden;
+  z-index: 10;
+  
 }
+
 .header-img {
   height: 150px;     /* 接近 h2 视觉高度 */
   width: auto;
   display: block;
   margin: 0px auto;
 }
-/* Carousel */
+
 .carousel {
   width: 100%;
   height: 100%;
@@ -59,12 +66,12 @@ body {
   object-fit: cover;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgba(0,0,0,1) 85%,
+    rgba(0,0,0,1) 95%,
     rgba(0,0,0,0) 100%
   );
   mask-image: linear-gradient(
     to bottom,
-    rgba(0,0,0,1) 85%,
+    rgba(0,0,0,1) 95%,
     rgba(0,0,0,0) 100%
   );
 
@@ -90,12 +97,6 @@ body {
   padding: 24px;
 }
 
-.overlay h1 {
-  font-size: 3.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  margin-bottom: 24px;
-}
 
 .name {
   font-size: 1rem;
@@ -157,14 +158,30 @@ body {
 .dot.active {
   background: #fff;
 }
+/*----------*/
 
-.hint {
-  font-size: 0.95rem;
-  color: #666;
+.video-blessing-section{
+  margin: 5px auto;
+  padding: 40px 0;
+}
+.video-wrapper {
+  width: 60%;
+  max-width: 520px;
+  min-width: 280px;
+
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 20px;
+
+  margin: 0 auto;
 }
 
-/*sections*/
-/* section 外层 */
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .profile-section {
   text-align: center;
 }
@@ -215,142 +232,7 @@ body {
   color: #777;
   margin-top: 4px;
 }
-.timeline-section {
-  position: relative;   /* 新增 */
-  margin: 10px auto;
-  padding: 120px 24px;  /* 稍微增加上下空间 */
-  text-align: center;
-}
-.journey-img {
-  height: 50px;     /* 接近 h2 视觉高度 */
-  width: auto;
-  display: block;
-  margin: 0px auto;
-}
-.timeline-bg {
-  position: absolute;
-  top: 90px;   /* ← 向下移动多少改这里 */
-  left: 45%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1000px;
-  pointer-events: none;
-  z-index: 0;
-}
-.timeline {
-  height:300px;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  margin-top: 60px;
-  position: relative;
-  z-index: 1;  /* 新增 */
-}
-
-.timeline-item {
-  position: absolute;
-  text-align: center;
-  cursor: pointer;
-}
-.timeline-item .dot {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  background: #f07502;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-.timeline-item:nth-child(1) {
-  left: 25%;
-  top: 65%;
-  background: #f07502;
-  border-radius: 70%;
-  margin: 0 auto 10px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(255,122,156,0.6);
-  border: 2px solid #ffffff;
-}
-
-.timeline-item:nth-child(2) {
-  left: 69%;
-  top: 1%;
-  background: #f07502;
-  border-radius: 70%;
-  margin: 0 auto 10px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(255,122,156,0.6);
-  border: 2px solid #ffffff;
-}
-
-.timeline-item:nth-child(3) {
-  left: 69%;
-  top: 70%;
-  background: #f07502;
-  border-radius: 70%;
-  margin: 0 auto 10px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(255,122,156,0.6);
-  border: 2px solid #ffffff;
-}
-
-.timeline-item:nth-child(4) {
-  left: 79%;
-  top: 16%;
-  background: #f07502;
-  border-radius: 70%;
-  margin: 0 auto 10px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(255,122,156,0.6);
-  border: 2px solid #ffffff;
-}
-
-.timeline-item:hover .dot {
-  transform: scale(1.3);
-}
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.lightbox-content {
-  position: relative;
-  max-width: 80%;
-}
-
-.lightbox img {
-  max-width: 100%;
-  max-height: 80vh;
-}
-
-.close-btn {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.prev { left: -60px; }
-.next { right: -60px; }
+/*--------*/
 .song-section {
   margin: 50px auto;
   text-align: center;
@@ -403,52 +285,13 @@ body {
   height: auto;
   display: block;
 }
-.message-section {
-  max-width: 900px;
-  margin: 50px auto;
-  text-align: center;
-}
-.message-img {
-  height: 50px;     /* 接近 h2 视觉高度 */
-  width: auto;
-  display: block;
-  margin: 0px auto;
-}
-.message-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
-
-.video-blessing {
-  margin: 5px auto;
-  padding: 40px 0;
-}
+/*--------*/
 .video-img {
   height: 50px;     /* 接近 h2 视觉高度 */
   width: auto;
   display: block;
   margin: 0px auto;
 }
-.video-wrapper {
-  width: 60%;
-  max-width: 520px;
-  min-width: 280px;
-
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 20px;
-
-  margin: 0 auto;
-}
-
-.video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
 .video-section {
   margin: 50px auto;
   text-align: center;
@@ -459,11 +302,6 @@ body {
   margin: 60px 0;
   text-align: center;
 }
-
-.video-row h3 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-}
 .support-img {
   height: 30px;     /* 接近 h2 视觉高度 */
   width: auto;
@@ -471,14 +309,25 @@ body {
   margin: 10px auto;
 }
 /* Track */
+.video-viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 .video-track {
   display: flex;
   transition: transform 0.5s ease;
-  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* One page = 3 videos */
 .video-page {
+  flex: 0 0 100%;
   min-width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -498,31 +347,41 @@ body {
   height: 100%;
   border: none;
 }
-
-/* Navigation */
-.video-nav {
+.video-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateY(18px);
-  z-index: 3;
-  background: rgba(255,255,255,0.25);
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(255,255,255,0.3);
   border: none;
   color: #fff;
   font-size: 2rem;
-  padding: 6px 14px;
-  cursor: pointer;
+  padding: 8px 16px;
   border-radius: 50%;
-  backdrop-filter: blur(4px);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
 }
 
-
-.video-nav.prev { left: -20px; }
-.video-nav.next { right: -20px; }
-
-.video-nav:hover {
-  background: rgba(255,255,255,0.4);
+.video-btn-left {
+  left: -30px;
 }
 
+.video-btn-right {
+  right: -30px;
+}
+/*-------*/
+.message-section {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+}
+.message-img {
+  height: 50px;     /* 接近 h2 视觉高度 */
+  width: auto;
+  display: block;
+  margin: 0px auto;
+}
 .map-section {
   text-align: center;
   margin: 50px auto;
@@ -543,4 +402,278 @@ body {
 .map-container iframe,
 .map-container canvas {
   max-width: 700px;
+}
+/*------*/
+
+.journey-img {
+  height: 50px;     /* 接近 h2 视觉高度 */
+  width: auto;
+  display: block;
+  margin: 0px auto;
+}
+.timeline-img {
+  position: absolute;
+  top: 90px;   /* ← 向下移动多少改这里 */
+  left: 45%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1000px;
+  pointer-events: none;
+  z-index: 0;
+}
+.timeline-section {
+  position: relative;   /* 新增 */
+  margin: 10px auto;
+  padding: 120px 24px;  /* 稍微增加上下空间 */
+  text-align: center;
+}
+
+.timeline-section .tl-container {
+  height:300px;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;  /* 新增 */
+}
+
+/* 通用外层 */
+.timeline-section .tl-item {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 点样式 */
+.timeline-section .tl-point {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background: #f07502;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,122,156,0.6);
+  border: 2px solid #ffffff;
+}
+
+/* hover 放大 */
+.timeline-section .tl-item:hover .tl-point {
+  transform: scale(1.3);
+}
+
+/* ===== 位置控制 ===== */
+
+.timeline-section .tl-item:nth-child(1) {
+  left: 25%;
+  top: 65%;
+}
+
+.timeline-section .tl-item:nth-child(2) {
+  left: 69%;
+  top: 1%;
+}
+
+.timeline-section .tl-item:nth-child(3) {
+  left: 69%;
+  top: 70%;
+}
+
+.timeline-section .tl-item:nth-child(4) {
+  left: 79%;
+  top: 16%;
+}
+/*-----*/
+.timeline-section .tl-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.timeline-section .tl-modal-inner {
+  position: relative;
+  max-width: 80%;
+}
+.timeline-section .tl-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 16px;
+}
+
+.timeline-section .tl-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline-section .tl-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline-section .tl-prev { left: -60px; }
+.timeline-section .tl-next { right: -60px; }
+/*---*/
+/* ===============================
+   X IFRAME COMPONENT
+   FULLY ISOLATED
+================================== */
+
+.xiframe-section {
+  margin: 80px auto;
+  text-align: center;
+  position: relative;
+}
+
+.xiframe-title {
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+/* 外层 */
+.xiframe-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 视口必须隐藏溢出 */
+.xiframe-viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* 轨道必须 flex */
+.xiframe-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.wiframe-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+/* 每一页必须锁死 100% 宽度 */
+.xiframe-page {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.wiframe-page {
+  flex: 0 0 100%;     /* ⭐ 最关键 */
+  max-width: 100%;    /* ⭐ 防止溢出 */
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+/* 卡片 */
+.xcard {
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+}
+/* Video card */
+.wcard {
+  aspect-ratio: 5 / 7;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+.wcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* 关键：裁剪填满 */
+  display: block;
+}
+/* 强制 iframe 填满 */
+.xcard iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* 按钮 */
+.xiframe-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(255,255,255,0.3);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.xiframe-btn-left { left: -30px; }
+.xiframe-btn-right { right: -30px; }
+
+.xiframe-btn:hover {
+  background: rgba(255,255,255,0.5);
+}
+.wiframe-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(255,255,255,0.3);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.wiframe-btn-left { left: -30px; }
+.wiframe-btn-right { right: -30px; }
+
+.wiframe-btn:hover {
+  background: rgba(255,255,255,0.5);
+}
+.fan-section {
+  margin: 50px auto;
+  text-align: center;
+}
+.name-section {
+  margin: 50px auto 40px;
+  text-align: center;
+}
+
+.sign-sec {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sign {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: 1px;
 }
