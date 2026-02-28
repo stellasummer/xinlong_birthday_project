@@ -1,4 +1,3 @@
-<!--Head-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +5,49 @@
   <title>XINLONG · Birthday Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
-
-
 <body>
-<!-- Hero Section -->
+
+  <!-- Hero Section -->
 <section class="hero">
+
   <div class="carousel">
     <div class="carousel-track">
       <div class="slide">
-        <img src="./assets/img/hero-1.jpg" alt="XINLONG Birthday 1">
+        <img src="./assets/img/hero1.jpg">
       </div>
       <div class="slide">
-        <img src="./assets/img/hero-2.jpg" alt="XINLONG Birthday 2">
+        <img src="./assets/img/hero2.jpg">
       </div>
       <div class="slide">
-        <img src="./assets/img/hero-3.jpg" alt="XINLONG Birthday 3">
+        <img src="./assets/img/hero3.jpg">
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero4.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero5.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero6.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero7.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero8.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero9.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero10.png" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero11.jpg" >
+      </div>
+      <div class="slide">
+        <img src="./assets/img/hero12.png" >
       </div>
     </div>
   </div>
@@ -33,7 +58,6 @@
     <img src="assets/img/birthday.png" class="header-img">
     <div id="countdown">Loading...</div>
   </div>
-
   <!-- Controls -->
   <button class="nav prev">‹</button>
   <button class="nav next">›</button>
@@ -43,10 +67,18 @@
     <span class="dot active"></span>
     <span class="dot"></span>
     <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
-</section>
 
-<!-- Main Content Wrapper -->
+</section>
 <div class="main-wrapper">
 
 <!--Dynamic fonts Section-->
@@ -101,32 +133,44 @@
     </div>
   </div>
 </section>
-<!--Life Section-->
+<!--life section-->
 <section class="section timeline-section">
-    <img src="assets/img/journey.png" class="journey-img">
-  <img src="assets/img/timeline.png" class="timeline-bg">
-  
-  <div class="timeline">
-    <div class="timeline-item" data-gallery="gallery1">
-      <div class="dot"></div>
-      
+
+  <img src="assets/img/journey.png" class="journey-img">
+  <img src="assets/img/timeline.png" class="timeline-img">
+
+  <div class="tl-container">
+
+    <div class="tl-item" data-gallery="gallery1">
+      <div class="tl-point"></div>
     </div>
 
-    <div class="timeline-item" data-gallery="gallery2">
-      <div class="dot"></div>
-      
+    <div class="tl-item" data-gallery="gallery2">
+      <div class="tl-point"></div>
     </div>
 
-    <div class="timeline-item" data-gallery="gallery3">
-      <div class="dot"></div>
-      
+    <div class="tl-item" data-gallery="gallery3">
+      <div class="tl-point"></div>
     </div>
-    <div class="timeline-item" data-gallery="gallery4">
-      <div class="dot"></div>
-      
+
+    <div class="tl-item" data-gallery="gallery4">
+      <div class="tl-point"></div>
+    </div>
+
+  </div>
+
+  <!-- 独立弹窗 -->
+  <div class="tl-modal" id="tlModal">
+    <div class="tl-modal-inner">
+      <button class="tl-close">&times;</button>
+      <button class="tl-btn tl-prev">&#10094;</button>
+      <img class="tl-image" />
+      <button class="tl-btn tl-next">&#10095;</button>
     </div>
   </div>
+
 </section>
+<!--studio-section-->
 <section class="section song-section">
   <img src="assets/img/studio.png" class="studio-img">
   <div class="grid-4x2">
@@ -185,40 +229,292 @@
   </div>
   </div>
 </section>
-<!--Video Section-->
-<section class="section video-section">
-  <img src="assets/img/videos.png" class="video-img">
-  
-  <!-- Row 1 -->
-  <div class="video-row">
-    <img src="assets/img/support.png" class="support-img">
+<!--cafe section-->
+<section class="section xiframe-section">
 
-    <button class="video-nav prev">‹</button>
-    <button class="video-nav next">›</button>
+  <img src="assets/img/cafe.png" class="xiframe-title">
 
-    <div class="video-track">
-      <div class="video-page">
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_A" allowfullscreen></iframe>
+  <div class="xiframe-wrapper">
+
+    <button class="xiframe-btn xiframe-btn-left">‹</button>
+    <button class="xiframe-btn xiframe-btn-right">›</button>
+
+    <div class="xiframe-viewport">
+      <img src="assets/img/korea.png" class="support-img">
+      <div class="xiframe-track">
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟐𝟎𝟐𝟔 𝐗𝐈𝐍𝐋𝐎𝐍𝐆 𝐁 𝐃𝐀𝐘 𝐄𝐕𝐄𝐍𝐓 <br><br>𝐩𝐥𝐞𝐚𝐬𝐞, <br>𝐋💿𝐍𝐆 𝐏𝐋𝐀𝐘 <br><br>⁰³⁻⁰⁹◦───────────◦ ⁰³⁻¹¹<br><br>🎧 카페 셉트<br>🎸 11:00 - 20:00<a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a><a href="https://twitter.com/hashtag/plz_longplay?src=hash&amp;ref_src=twsrc%5Etfw">#plz_longplay</a> <a href="https://t.co/StDCWfrzEP">pic.twitter.com/StDCWfrzEP</a></p>&mdash; DC 허씬롱 마이너 갤러리 (@xinlong_dc) <a href="https://twitter.com/xinlong_dc/status/2015358360498184532?ref_src=twsrc%5Etfw">January 25, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">「 다른 행성에서 만나자 」<br><br>𝗟𝗼𝗻𝗴 𝗧!𝗺𝗲 𝗡𝗼 𝗦𝗲𝗲<br>𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝘅𝗶𝗻𝗹𝗼𝗻𝗴&#39;𝘀 𝗽𝗹𝗮𝗻𝗲𝘁🌍<br><br>2026.3.8-3.11 <br>📍 서울특별시 마포구 동교로23길 32-22 1층 카페메리<a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/%E3%83%9B%E3%83%BC%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ホーシンロン</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://t.co/lN2yhdn8mq">pic.twitter.com/lN2yhdn8mq</a></p>&mdash; Cocokalo_XINLONG (@cocokalo0311) <a href="https://twitter.com/cocokalo0311/status/2021795506004144197?ref_src=twsrc%5Etfw">February 12, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dear. My LONG 💌<br><br>Date: 03.08 - 03.11<br>Place: 카페333<a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1%EC%83%9D%EC%B9%B4?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱생카</a><a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a><a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://t.co/pqO8BgxCQz">pic.twitter.com/pqO8BgxCQz</a></p>&mdash; Dear. My LONG 💌 (@DearMyLONG311) <a href="https://twitter.com/DearMyLONG311/status/2024091817806066074?ref_src=twsrc%5Etfw">February 18, 2026</a></blockquote> 
+          </div>
         </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_B" allowfullscreen></iframe>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟮𝟬𝟮𝟲 𝘽𝙄𝙍𝙏𝙃𝘿𝘼𝙔 𝘾𝘼𝙁𝙀 𝙀𝙑𝙀𝙉𝙏 𝙛𝙤𝙧 𝙓𝙄𝙉𝙇𝙊𝙉𝙂<br><br>꒰ 씬롱이네 생선가게🐱 ꒱<br><br>➳♡゛03.07 - 03.08, 03.11<br>➳♡゛ 펀치드렁크러브<a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/CUxgKcEHhl">pic.twitter.com/CUxgKcEHhl</a></p>&mdash; 씬롱이네 생선가게🐱 (@HBD_xinlong) <a href="https://twitter.com/HBD_xinlong/status/2021926903935057996?ref_src=twsrc%5Etfw">February 12, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">➷ 𝟮𝟬𝟮𝟲 𝑯𝑨𝑷𝑷𝒀 𝑿𝑰𝑵𝑳𝑶𝑵𝑮 𝑫𝑨𝒀 .ᐟ ⸝⋆<br><br>💛서울 해피벌스데이<br>🧡부산 카페 모멘트<br>➷ 𝟢3.08 ~ 𝟢3.11 (3/9 월요일 영업❌)<a href="https://twitter.com/hashtag/RT?src=hash&amp;ref_src=twsrc%5Etfw">#RT</a> 추첨 한 분께 롱거키링을 드립니다<a href="https://twitter.com/hashtag/%EB%A1%B1%EA%B1%B0%EB%8A%94_%EA%B7%80%EC%97%AC%EC%9B%8C?src=hash&amp;ref_src=twsrc%5Etfw">#롱거는_귀여워</a><a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1%EC%83%9D%EC%B9%B4?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱생카</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://twitter.com/hashtag/%EC%95%8C%EB%94%94%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알디원</a> <a href="https://twitter.com/hashtag/%EC%95%A8%EB%A6%AC%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#앨리즈</a> <a href="https://t.co/wmkWDPQeyT">pic.twitter.com/wmkWDPQeyT</a></p>&mdash; 2026 씬롱 생카 (@ALD1_HBD) <a href="https://twitter.com/ALD1_HBD/status/2021519507009987031?ref_src=twsrc%5Etfw">February 11, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">⚡️사롱의 메세지북 Part.2<br><br>3월 씬롱이의 생일을 축하하며 생일카페를 주최합니다!<br><br>⚡️Happy Xinlong Day<br><br>위치 : 부산 카페 아워<br>날짜 : 3월 7일, 8일, 11일 (토, 일, 수요일)<br><br>[순차적으로 더 자세한 공지 드리겠습니다🤟 <a href="https://t.co/bc8JgiXXOA">pic.twitter.com/bc8JgiXXOA</a></p>&mdash; XINLONG BOOK PROJECT⚡️ (@hxl_gift) <a href="https://twitter.com/hxl_gift/status/2020869719721382128?ref_src=twsrc%5Etfw">February 9, 2026</a></blockquote>
+          </div>
         </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_C" allowfullscreen></iframe>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟮𝟬𝟮𝟲 𝙓𝙄𝙉𝙇𝙊𝙉𝙂 𝙃𝘽𝘿 𝘾𝘼𝙁𝙀 𝙀𝙑𝙀𝙉𝙏<br><br>𝘾𝙖𝙣𝙙𝙮 𝙅𝙚𝙡𝙡𝙮 𝙇𝙤𝙫𝙚ᢉ𐭩<br><br>ෆ26.03.08-26.03.11 <br><br>ෆ로우필름카페 <br><br>알티추첨 두분께 슬로건을 드립니다.<a href="https://twitter.com/hashtag/candy_jelly_xinlong?src=hash&amp;ref_src=twsrc%5Etfw">#candy_jelly_xinlong</a> <a href="https://t.co/KByA9ESgg5">pic.twitter.com/KByA9ESgg5</a></p>&mdash; 𝙓𝙞𝙣-𝙨𝙩𝙚𝙖𝙡𝙚𝙧 (@Xinstealer311) <a href="https://twitter.com/Xinstealer311/status/2021104618198183991?ref_src=twsrc%5Etfw">February 10, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">┌───────── · · · · ♡<br>┌──── “ 💭 „<br>└➤ 𝚝𝚑𝚎 𝚜𝚎𝚊𝚜𝚘𝚗 𝚘𝚏 𝚢𝚘𝚞<br><br>2026 씬롱이의 생일을 맞이하여 카페이벤트를 진행합니다.<br>-<br>🩵홍대 카페 멜랑<br>🩵03.07 - 03.11<br>--<a href="https://twitter.com/hashtag/RT%EC%B6%94%EC%B2%A8?src=hash&amp;ref_src=twsrc%5Etfw">#RT추첨</a> 우치와 증정 <a href="https://t.co/zdG12blfqo">pic.twitter.com/zdG12blfqo</a></p>&mdash; 너라는 계절 (@XINLONG_HB) <a href="https://twitter.com/XINLONG_HB/status/2023616387344986150?ref_src=twsrc%5Etfw">February 17, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟮𝟬𝟮𝟲 𝗫𝗜𝗡𝗟𝗢𝗡𝗚 𝗕𝗜𝗥𝗧𝗛𝗗𝗔𝗬 𝗘𝗩𝗘𝗡𝗧<br><br>🍀 럭키보이 씬드롬 🍀<br><br>ꕥ 키키스벌스데이<br>ꕥ 03.07-08, 11<a href="https://twitter.com/hashtag/LuckyBoyXindrome?src=hash&amp;ref_src=twsrc%5Etfw">#LuckyBoyXindrome</a><a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/Q8AI710p9c">pic.twitter.com/Q8AI710p9c</a></p>&mdash; ALD1 Love Club (@ald1loveclub) <a href="https://twitter.com/ald1loveclub/status/2022928870886785136?ref_src=twsrc%5Etfw">February 15, 2026</a></blockquote>
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">❄️알디원 씬롱(Xinlong) 생일카페를 준비했습니다.❄️<br><br>📍브라운시티 갤러리점<br> 12:00~20:00<br>📍26. 03. 06. ~26. 03. 08. 그리고 11일<br><br>❄️ RT : 에코백 + 패브릭버튼(추첨2명)<a href="https://twitter.com/hashtag/%EC%95%8C%EB%94%94%EC%9B%90_Xinlong_HBD?src=hash&amp;ref_src=twsrc%5Etfw">#알디원_Xinlong_HBD</a><a href="https://twitter.com/hashtag/%EC%83%9D%EC%9D%BC%EC%B6%95%ED%95%98%ED%95%B4_%EC%94%AC%EB%A1%B1_260311?src=hash&amp;ref_src=twsrc%5Etfw">#생일축하해_씬롱_260311</a> <a href="https://t.co/aPF9PpjMie">pic.twitter.com/aPF9PpjMie</a></p>&mdash; 알디원응원카페 (@ADO_event_cafe) <a href="https://twitter.com/ADO_event_cafe/status/2022870130049564679?ref_src=twsrc%5Etfw">February 15, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝐘𝐎𝐔&#39;𝐑𝐄 𝐌𝐘 𝐋𝐎𝐍𝐆𝐒𝐓𝐀𝐑ᯓ★ <br><br>나의 별 씬롱! 21번째 생일을 축하하며💙<br><br>ᯓ★ 합정 블루로그<br>ᯓ★ 03.07~03.08 <a href="https://twitter.com/hashtag/U_R_MY_LONGSTAR?src=hash&amp;ref_src=twsrc%5Etfw">#U_R_MY_LONGSTAR</a> <a href="https://twitter.com/hashtag/%EC%9C%A0%EC%95%84%EB%A7%88%EC%9D%B4%EB%A1%B1%EC%8A%A4%ED%83%80?src=hash&amp;ref_src=twsrc%5Etfw">#유아마이롱스타</a> <a href="https://twitter.com/xinlong_nyang?ref_src=twsrc%5Etfw">@xinlong_nyang</a> 님 SUPPORT<a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/%E8%B4%BA%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#贺鑫隆</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/xinlong?src=hash&amp;ref_src=twsrc%5Etfw">#xinlong</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1%EC%83%9D%EC%9D%BC%EC%B9%B4%ED%8E%98?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱생일카페</a> <a href="https://t.co/LaoTLrBPzj">pic.twitter.com/LaoTLrBPzj</a></p>&mdash; 유아마이롱스타 (@urmylongstar) <a href="https://twitter.com/urmylongstar/status/2024154552891855352?ref_src=twsrc%5Etfw">February 18, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟮𝟬𝟮𝟲 𝗫𝗜𝗡𝗟𝗢𝗡𝗚 𝗕-𝗗𝗔𝗬 𝗘𝗩𝗘𝗡𝗧<br><br>.....∧_∧<br>.. (ᓀ‸ᓂ) ♡ <br>┏ー∪∪━━━━━━━┓<br> 허냥이 집사모집 .•🐾<br>┗━━━━━━━━┛<br><br>⌁ 26.3.7~8, 11<br>⌁ 서울 스윗도프<br>⌁ 부산 러브클럽<br><br>RT 추첨 쿠션키링을 보내드립니다(국내한정)<a href="https://twitter.com/hashtag/%ED%97%88%EB%83%A5%EC%9D%B4_%EC%A7%91%EC%82%AC%EB%AA%A8%EC%A7%91?src=hash&amp;ref_src=twsrc%5Etfw">#허냥이_집사모집</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://t.co/pIgMiPY0CY">pic.twitter.com/pIgMiPY0CY</a></p>&mdash; 허냥이집사모집 (@HBD_HE_NYANG) <a href="https://twitter.com/HBD_HE_NYANG/status/2023641401372856415?ref_src=twsrc%5Etfw">February 17, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">²⁰²⁶ ᵡᴵᴺᴸᴼᴺᴳ ᴮ⁻ᴰᴬᵞ ᴱᵛᴱᴺᵀ<br><br>˚₊⋅∘┈˃̶༒˂̶┈∘⋅ ˚₊<br> ࿒ 神秘的麻将馆 ࿒<br> ⨟ A mysterious mahjong parlor<br><br> 🀅 아카이브 제트<br> 🀐 ㋂ ㏦-㏧&amp;㏪<a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1%EC%9D%B4%EC%83%9D%EC%9D%BC%EC%9D%B4%EB%8F%84%EC%86%8C%EC%A4%91%ED%95%B4%EC%9A%94?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱이생일이도소중해요</a><a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://t.co/2MqyUFkyl2">pic.twitter.com/2MqyUFkyl2</a></p>&mdash; inversión (@inversionxl) <a href="https://twitter.com/inversionxl/status/2024472481869025427?ref_src=twsrc%5Etfw">February 19, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">˚<br><br>:¨·.·¨:<br> `·. 隆隆小馆 🥟 ☆°*ﾟ*<br><br>☘️ 행복을 빚는 작은 만두가게 .ᐟ<br> <br>²⁰²⁶&#39; xɪɴʟᴏɴɢ ʙ-ᴅᴀʏ <br> ᴄᴀꜰᴇ ᴇᴠᴇɴᴛ<br><br>𝟤𝟢𝟤𝟨.𝟥.𝟩-𝟥.𝟪 / 𝟥.𝟣𝟣 ɪɴ ꜱᴇᴏᴜʟ<br><br>𝘊𝘖𝘔𝘐𝘕𝘎 𝘚𝘖𝘖𝘕<a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E8%B4%BA%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#贺鑫隆</a><a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a>  <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/tbXOkP1Ebw">pic.twitter.com/tbXOkP1Ebw</a></p>&mdash; 𝗡°𝟬,𝟬,𝟬 (@triplezero_311) <a href="https://twitter.com/triplezero_311/status/2021215574819270922?ref_src=twsrc%5Etfw">February 10, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">🏫씬롱아 학교가자!<br><br>-<br><br>허씬롱 생일을 맞이하여 부산에서 카페이벤트를 진행합니다.<br><br>📍부산 타임슬래시<br>📅26.03.07(토) , 03.11(수)<br>- 8,9일 방문해도 특전은 수령가능<a href="https://twitter.com/hashtag/rt?src=hash&amp;ref_src=twsrc%5Etfw">#rt</a> 추첨을 통해 전체특전을 보내드립니다.<a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://t.co/eOgD6FtZVv">pic.twitter.com/eOgD6FtZVv</a></p>&mdash; 타임슬래시 | 부산생카 | 컵홀더 | 생일카페 | (@timeslashcafe2) <a href="https://twitter.com/timeslashcafe2/status/2024481359528677548?ref_src=twsrc%5Etfw">February 19, 2026</a></blockquote>
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">˖ ࣪⊹ 𝟮𝟬𝟮𝟲 𝗫𝗜𝗡𝗟𝗢𝗡𝗚 𝗕𝗜𝗥𝗧𝗛𝗗𝗔𝗬 𝗖𝗔𝗙𝗘 𝗘𝗩𝗘𝗡𝗧 ˖˚⌖<br><br>願望正在一步步實現⋯🐾<br><br>🍃— 2026.03.09 ~ 03.11<br>📍— 폴링디저트<a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1_%EA%B3%A0%EC%A7%84%EA%B0%90%EB%9E%98?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱_고진감래</a> <a href="https://twitter.com/hashtag/XINLONG_%E8%8B%A6%E7%9B%A1%E7%94%98%E4%BE%86?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG_苦盡甘來</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1%EC%83%9D%EC%9D%BC%EC%B9%B4%ED%8E%98?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱생일카페</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://t.co/Qxicul3T0X">pic.twitter.com/Qxicul3T0X</a></p>&mdash; 자자 (@JA_Longtime0311) <a href="https://twitter.com/JA_Longtime0311/status/2025169712141963763?ref_src=twsrc%5Etfw">February 21, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">୨୧ cafe CINNAMON LONG ୨୧ ˙ᵕ˙ ✿ <br><br>🧁취향 따윈 부시듯 다 반하게 만들래🍧<br><br>⋆𐙚₊˚┈─┈26.03.11┈─┈ ⋆𐙚₊˚<br>✿ 요고 프로즌요거트 홍대점<br>✿ 카페니타<a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1%EC%83%9D%EC%B9%B4?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱생카</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://twitter.com/hashtag/%EC%95%8C%EB%94%94%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알디원</a> <a href="https://t.co/Od7X4EIfuf">pic.twitter.com/Od7X4EIfuf</a></p>&mdash; ୨୧ cafe CINNAMON LONG ୨୧ ˙ᵕ˙ ✿ (@cinnamon_long) <a href="https://twitter.com/cinnamon_long/status/2025863633423720636?ref_src=twsrc%5Etfw">February 23, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">ᴇᴠᴇʀʏᴅᴀʏ 𝗫𝗜𝗡 𝗟𝗢𝗡𝗚 ᴅᴀʏ<br><br>➳에브리데이 씬롱🐱 데이<br><br>➳☆ 3월7일. 8일. 11일<br>➳☆ 카페키로<br>➳☆ 럭키드로우.포토부스<a href="https://twitter.com/hashtag/%EB%AA%A8%EB%93%A0%EB%82%A0%EC%9D%80%EC%94%AC%EB%A1%B1DAY?src=hash&amp;ref_src=twsrc%5Etfw">#모든날은씬롱DAY</a><a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a><a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a><a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://t.co/oFRJca9syi">pic.twitter.com/oFRJca9syi</a></p>&mdash; 모든날은씬롱데이🐱 (@_loverrrqq) <a href="https://twitter.com/_loverrrqq/status/2026624542999982300?ref_src=twsrc%5Etfw">February 25, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝑯𝑨𝑷𝑷𝒀 𝑿𝑰𝑵𝑳𝑶𝑵𝑮 𝑫𝑨𝒀 🐱<a href="https://twitter.com/hashtag/sweet_little_kitty?src=hash&amp;ref_src=twsrc%5Etfw">#sweet_little_kitty</a><br><br>💌 바닐라808<br>🩷 03.07 ~ 03.11 (9일휴무) <br>🎀 주말 11시-18시 / 평일 12시 - 19시 <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/mlWz2WUUF4">pic.twitter.com/mlWz2WUUF4</a></p>&mdash; 💌 (@ALD1___2025) <a href="https://twitter.com/ALD1___2025/status/2026714471625011304?ref_src=twsrc%5Etfw">February 25, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">ᴀʟᴅ𝟣 xɪɴʟᴏɴɢ ʙɪʀᴛʜᴅᴀʏ ᴄᴀꜰᴇ ᴇᴠᴇɴᴛ<br><br>𝓕𝓸𝓻 𝓪 𝓧𝓘𝓝𝓛𝓞𝓝𝓖 𝓽𝓲𝓶𝓮<br>-<br><br>롱거 허냥이 씬롱이의 생일을 축하하며 카페 이벤트를 진행합니다<br><br>🐱 Cafe 호야팡야 <br>🫶26.03.08 - 03.11 (9일 휴무)<br><br>앨리즈~ 많관부💕 <a href="https://t.co/GyuO000bwT">pic.twitter.com/GyuO000bwT</a></p>&mdash; 이니미니 (@WalWal_Luvity_) <a href="https://twitter.com/WalWal_Luvity_/status/2027119830965612547?ref_src=twsrc%5Etfw">February 26, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">▸𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗟𝗼𝗻𝗴-𝗟𝗮𝗻𝗗<br><br>^. .^ ੭<br>┏━xʟ━━━━━━━━━━┓<br>🐱 야생의 씬롱이 나타났다!! 🔍<br>┗━━━━━━━━━━━━┛<br><br>📍 카페 소프트 선데이<br>🗓️ 3월 11일<a href="https://twitter.com/XINLONGGLOBAL?ref_src=twsrc%5Etfw">@XINLONGGLOBAL</a> 님 SUPPORT<a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a><a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/8yEDmcliZu">pic.twitter.com/8yEDmcliZu</a></p>&mdash; 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗟𝗼𝗻𝗴-𝗟𝗮𝗻𝗗 (@WelcomeToLLD) <a href="https://twitter.com/WelcomeToLLD/status/2027307823122755841?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote>
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟸𝟶𝟸𝟼 xɪɴʟᴏɴɢ ʙɪʀᴛʜᴅᴀʏ ᴄᴀғᴇ<br><br>:¨ ·.· ¨: <br> `· . 롱과장님의 이중생활!<br><br>⋆⌁⌁⌁❤︎⌁⌁⌁⋆<br><br>📍 마이클로버<br>📅 03.08<br><br>📍 카페아히<br>📅 03.10-03.11<a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/HEXINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#HEXINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/QPtuCpruSc">pic.twitter.com/QPtuCpruSc</a></p>&mdash; 롱과장님의 이중생활 | 2026 씬롱 생일카페 (@HappyBdayLONG) <a href="https://twitter.com/HappyBdayLONG/status/2025158680996696373?ref_src=twsrc%5Etfw">February 21, 2026</a></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="xiframe-wrapper">
+
+    <button class="wiframe-btn wiframe-btn-left">‹</button>
+    <button class="wiframe-btn wiframe-btn-right">›</button>
+
+    <div class="xiframe-viewport">
+      <img src="assets/img/china.png" class="support-img">
+      <div class="wiframe-track">
+        <div class="wiframe-page">
+        <div class="wcard">
+          <a href="https://weibo.com/6987860312/Qre4xBwlm?refer_flag=1001030103_">
+          <img src="assets/img/beijing.jpg">
+          </a>
+        </div>
+        <div class="wcard">
+          <a href="https://weibo.com/8442721385/5258720230774878">
+          <img src="assets/img/nanjing.jpg">
+          </a>
+        </div>
+        <div class="wcard">
+          <a href="https://weibo.com/6615460158/5257194847078531">
+          <img src="assets/img/shanghai.jpg">
+          </a>
+        </div>
+        </div>
+
+        <div class="wiframe-page">
+        <div class="wcard">
+          <a href="https://weibo.com/5566010580/5247454691984239">
+          <img src="assets/img/taiyuan.jpg">
+          </a>
+        </div>
+        <div class="wcard">
+          <a href="https://weibo.com/6465050850/5264747083863556">
+          <img src="assets/img/guangzhou.jpg">
+          </a>
+        </div>
+        <div class="wcard">
+          <a href="https://weibo.com/6058470726/5250411922719069">
+          <img src="assets/img/xiamen.jpg">
+          </a>
+        </div>
+        </div>
+
+        <div class="wiframe-page">
+        <div class="wcard">
+          <a href="https://weibo.com/7906427861/5261542636391900">
+          <img src="assets/img/shenzhen.jpg">
+          </a>
+        </div>
+        
         </div>
       </div>
     </div>
   </div>
 
+  <div class="xiframe-wrapper">
+
+    <button class="xiframe-btn xiframe-btn-left">‹</button>
+    <button class="xiframe-btn xiframe-btn-right">›</button>
+
+    <div class="xiframe-viewport">
+      <img src="assets/img/other.png" class="support-img">
+      <div class="xiframe-track">
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">₍^. .^₎ CLUB 311 - He Xinlong&#39;s 21st Birthday Event in Vietnam<br><br>🗒️ March 8, 2026 <br>⏰ 2:00 PM - 4:00 PM<br>📍 Hanoi: J Cafe<br>📍 Ho Chi Minh: Auvery cafe<a href="https://twitter.com/hashtag/HXL_CLUB311?src=hash&amp;ref_src=twsrc%5Etfw">#HXL_CLUB311</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://t.co/8Qo841Fc31">pic.twitter.com/8Qo841Fc31</a></p>&mdash; HE XINLONG VIETNAM (@longcorevn) <a href="https://twitter.com/longcorevn/status/2027372357363667094?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">⋆┈┈┈⓪③①①┈┈┈⋆<br>⋆˙⟡ 𝙃𝘼𝙋𝙋𝙔 𝘽𝙄𝙍𝙏𝙃𝘿𝘼𝙔 𝙓𝙄𝙉𝙇𝙊𝙉𝙂 𓂃⟡.·<br><br>🔵カップホルダー+特典<a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a><br><br>🔵高画質プリントケーキ<br>数量限定 (先着でIDフォト付き)<br>.<br>✩⡱配布：03/06~<br>✩⡱装飾：03/06~03/11<br>✩⡱大阪 鶴橋 韓国 センイル カフェ 생카 カプホ… <a href="https://t.co/t0Hlh8kMEH">https://t.co/t0Hlh8kMEH</a> <a href="https://t.co/GHKbrihHB0">pic.twitter.com/GHKbrihHB0</a></p>&mdash; 𝐜𝐚𝐟𝐞 𝐛𝐥𝐮𝐮 (@cafebluu) <a href="https://twitter.com/cafebluu/status/2027339146474189017?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">⋆┈┈┈⓪③①①┈┈┈⋆<br>*:+🎀ྀི𝙷𝙰𝙿𝙿𝚈 𝙱𝙸𝚁𝚃𝙷𝙳𝙰𝚈 𝚇𝙸𝙽𝙻𝙾𝙽𝙶🎀ྀི+:*<br><br>💗カップホルダー+特典<a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a><br><br>💗プリントマカロン<br>数量限定 (先着でIDフォト付き)<br>.<br>♡̶⡱配布：03/07~<br>♡̶⡱装飾：03/07~03/11<br>♡̶⡱大阪 鶴橋 韓国 センイル カフェ 생카 カプホ… <a href="https://t.co/wwLJEq5zpj">https://t.co/wwLJEq5zpj</a> <a href="https://t.co/v5wgOkhBYQ">pic.twitter.com/v5wgOkhBYQ</a></p>&mdash; 𝐜𝐚𝐟𝐞 𝐡𝐨𝐨𝐝𝐢𝐞 (@cafehoodie) <a href="https://twitter.com/cafehoodie/status/2027330017949348063?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">💗Giveaway <a href="https://twitter.com/hashtag/%F0%9D%99%87%F0%9D%99%A4%F0%9D%99%A3%F0%9D%99%9C%F0%9D%99%A8%F0%9D%99%85%F0%9D%99%A4%F0%9D%99%AA%F0%9D%99%A7%F0%9D%99%A3%F0%9D%99%9A%F0%9D%99%AE?src=hash&amp;ref_src=twsrc%5Etfw">#𝙇𝙤𝙣𝙜𝙨𝙅𝙤𝙪𝙧𝙣𝙚𝙮</a> :𝟮𝟭𝙨𝙩 𝙀𝙫𝙤𝙡𝙪𝙩𝙞𝙤𝙣 <br>Xinlong Birthday cafe ᰔ ᰔ ᰔ<br><br>🗓️ 7 March 2026<br>📍 Goodmood CAFE <br>⏰TBA<br>🩷🩷แวะมารับกันเยอะๆน๊าาาา  ☆⋆｡<br><br>CMS standy/keyring : <a href="https://twitter.com/hashtag/Yow%C3%A4A_%E0%B8%A7%E0%B8%B2%E0%B8%94%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%99%E0%B8%B0?src=hash&amp;ref_src=twsrc%5Etfw">#YowäA_วาดแล้วนะ</a> <a href="https://t.co/kC7NIzqVds">pic.twitter.com/kC7NIzqVds</a></p>&mdash; puizee (@puizee) <a href="https://twitter.com/puizee/status/2026995326847267024?ref_src=twsrc%5Etfw">February 26, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">🎂センイルイベント🎂<br>ALD1 シンロン🗓3/6-11<br><br>イベントセット(1500円)ご注文で⁡⁡ドリンク➕ケーキ➕特典🎁<br><br>ALLYZの皆様お待ちしております！！🤍<a href="https://twitter.com/hashtag/HappyXinlongDay?src=hash&amp;ref_src=twsrc%5Etfw">#HappyXinlongDay</a><a href="https://twitter.com/hashtag/HAPPY_XINLONG_DAY?src=hash&amp;ref_src=twsrc%5Etfw">#HAPPY_XINLONG_DAY</a><a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/Xinlong?src=hash&amp;ref_src=twsrc%5Etfw">#Xinlong</a> <a href="https://twitter.com/hashtag/%E8%B4%BA%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#贺鑫隆</a> <a href="https://twitter.com/hashtag/ALLYZ?src=hash&amp;ref_src=twsrc%5Etfw">#ALLYZ</a><a href="https://twitter.com/hashtag/DOMOCAFE?src=hash&amp;ref_src=twsrc%5Etfw">#DOMOCAFE</a> <a href="https://twitter.com/hashtag/%E3%82%BB%E3%83%B3%E3%82%A4%E3%83%AB%E3%82%AB%E3%83%95%E3%82%A7?src=hash&amp;ref_src=twsrc%5Etfw">#センイルカフェ</a> <a href="https://twitter.com/hashtag/%E6%96%B0%E5%A4%A7%E4%B9%85%E4%BF%9D?src=hash&amp;ref_src=twsrc%5Etfw">#新大久保</a> <a href="https://twitter.com/hashtag/%E3%82%BB%E3%83%B3%E3%82%A4%E3%83%AB?src=hash&amp;ref_src=twsrc%5Etfw">#センイル</a> <a href="https://t.co/bnhlOt23mN">pic.twitter.com/bnhlOt23mN</a></p>&mdash; DOMO CAFE 新大久保店 (@domocafe1) <a href="https://twitter.com/domocafe1/status/2026506773889429527?ref_src=twsrc%5Etfw">February 25, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">💚<br><br>그날의 한 장면⭐︎<br><br>⸜❤︎⸝ ALD1 シンロンさん <br>⸜❤︎⸝ カプホ<br>⸜❤︎⸝ 3/6-11<a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a><a href="https://twitter.com/hashtag/%E3%82%BB%E3%83%B3%E3%82%A4%E3%83%AB%E3%82%AB%E3%83%95%E3%82%A7?src=hash&amp;ref_src=twsrc%5Etfw">#センイルカフェ</a> <a href="https://twitter.com/hashtag/%E6%96%B0%E5%A4%A7%E4%B9%85%E4%BF%9D?src=hash&amp;ref_src=twsrc%5Etfw">#新大久保</a> <a href="https://twitter.com/hashtag/%E3%82%AB%E3%83%83%E3%83%97%E3%83%9B%E3%83%AB%E3%83%80%E3%83%BC%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88?src=hash&amp;ref_src=twsrc%5Etfw">#カップホルダーイベント</a> <a href="https://t.co/beXlSqfyWU">pic.twitter.com/beXlSqfyWU</a></p>&mdash; YOIZCAFE新大久保 (@YOIZCAFE) <a href="https://twitter.com/YOIZCAFE/status/2025835900480229605?ref_src=twsrc%5Etfw">February 23, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="es" dir="ltr">𓆰𓆪𝗗𝗥𝗔𝗚𝗢𝗡 𝗫𝗜𝗡𝗟𝗢𝗡𝗚 𝗗𝗔𝗬🐉<br>birthday cupsleeve event<br><br>--------<br><br>📅 Sábado 7 de Marzo<br><br>⏰ Horario:<br>12:00 PM a 4:00 PM<br><br>📍 1900 Cafe<br>Medellín 33, Roma Nte., Cuauhtémoc, Ciudad de México, CDMX<a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%E8%B4%BA%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#贺鑫隆</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/dwGIzIXbun">pic.twitter.com/dwGIzIXbun</a></p>&mdash; ALD1 México (@ald1mx) <a href="https://twitter.com/ald1mx/status/2021391149580288311?ref_src=twsrc%5Etfw">February 11, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">𝟮𝟬𝟮𝟲 𝗫𝗜𝗡𝗟𝗢𝗡𝗚 𝗕𝗜𝗥𝗧𝗛𝗗𝗔𝗬 𝗘𝗩𝗘𝗡𝗧<br><br>🍀 럭키보이 씬드롬 🍀<br><br>ꕥ 키키스벌스데이<br>ꕥ 03.07-08, 11<a href="https://twitter.com/hashtag/LuckyBoyXindrome?src=hash&amp;ref_src=twsrc%5Etfw">#LuckyBoyXindrome</a><a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/Q8AI710p9c">pic.twitter.com/Q8AI710p9c</a></p>&mdash; ALD1 Love Club (@ald1loveclub) <a href="https://twitter.com/ald1loveclub/status/2022928870886785136?ref_src=twsrc%5Etfw">February 15, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Allyz de Chile, los invitamos a celebrar el cumpleaños de Xinlong con nosotros 💓<br><br>🗓️ Fecha: Viernes 7 de marzo.<br>📍 Lugar: Cafetería Somos Zen (Bandera 620, Oficina 311, piso 3, Santiago).<br><br>No te olvides de reservar tu set temático 🐈‍⬛<a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/ALD1CHILE?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1CHILE</a> <a href="https://twitter.com/hashtag/ALLYZ?src=hash&amp;ref_src=twsrc%5Etfw">#ALLYZ</a> <a href="https://twitter.com/hashtag/HEXINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#HEXINLONG</a> <a href="https://t.co/0ODz9bZWUd">pic.twitter.com/0ODz9bZWUd</a></p>&mdash; XINLONG CHILE 🇨🇱 (@HeXinlongChile) <a href="https://twitter.com/HeXinlongChile/status/2026733161053339747?ref_src=twsrc%5Etfw">February 25, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">✨ XINLONG Birthday Café – Paris ✨<br><br>📍 Paris 5e<br>🗓 11.03.2026<br>⏰ 6PM–8PM<br><br>🎁 Free goodies<br>• Stage memo ticket<br>• Postcard<br>More surprises are on the way<br><br>👉 Please fill in this form if you plan to come <br>🔗<a href="https://t.co/HQ50YQI7tM">https://t.co/HQ50YQI7tM</a><a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a><a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/2fJEoIRVVe">pic.twitter.com/2fJEoIRVVe</a></p>&mdash; Suze (@i_Sv2_e) <a href="https://twitter.com/i_Sv2_e/status/2019845940136538377?ref_src=twsrc%5Etfw">February 6, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">₍^. .^₎Ⳋ Luminous Pulse 311 : 씬롱 에게 닿는 빛 ⋆˙⟡<br><br>XINLONG’s 21st Birthday Project in Yangon 🎂<br><br> ☂️ Donation Project – March 11<br> ☕️ Cafe Event Project – March 8<br><br>More details &amp; gifts are coming soon 🌟<a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a><a href="https://twitter.com/hashtag/LuminousPulse311_%EC%94%AC%EB%A1%B1%EC%97%90%EA%B2%8C%EB%8B%BF%EB%8A%94%EB%B9%9B?src=hash&amp;ref_src=twsrc%5Etfw">#LuminousPulse311_씬롱에게닿는빛</a> <a href="https://t.co/yQMiIEsBcq">pic.twitter.com/yQMiIEsBcq</a></p>&mdash; HE XINLONG MYANMAR (@HEXINLONGMM) <a href="https://twitter.com/HEXINLONGMM/status/2020497722407801339?ref_src=twsrc%5Etfw">February 8, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ꔛ ꕤ 𓈒 𓂂𓏸 𝙓𝙞𝙣𝙡𝙤𝙣𝙜 𝘽𝙞𝙧𝙩𝙝𝙙𝙖𝙮 𝙘𝙖𝙛𝙚 𓈒 𓂂𓏸 ꕤ ꔛ<a href="https://twitter.com/hashtag/%F0%9D%99%87%F0%9D%99%A4%F0%9D%99%A3%F0%9D%99%9C%F0%9D%99%A8%F0%9D%99%85%F0%9D%99%A4%F0%9D%99%AA%F0%9D%99%A7%F0%9D%99%A3%F0%9D%99%9A%F0%9D%99%AE?src=hash&amp;ref_src=twsrc%5Etfw">#𝙇𝙤𝙣𝙜𝙨𝙅𝙤𝙪𝙧𝙣𝙚𝙮</a> :𝟮𝟭𝙨𝙩 𝙀𝙫𝙤𝙡𝙪𝙩𝙞𝙤𝙣 <br><br>📍ชั้น 2 GOODMOOD CAFE (BTS Sanam Pao)<br>🗓️ 7-8 March 2026<a href="https://twitter.com/hashtag/HappyXinlongDay?src=hash&amp;ref_src=twsrc%5Etfw">#HappyXinlongDay</a><a href="https://twitter.com/hashtag/Xinlong?src=hash&amp;ref_src=twsrc%5Etfw">#Xinlong</a> <a href="https://twitter.com/hashtag/%E0%B8%8B%E0%B8%B4%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%87?src=hash&amp;ref_src=twsrc%5Etfw">#ซินหลง</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://t.co/YmhfiqjXO6">pic.twitter.com/YmhfiqjXO6</a></p>&mdash; Xinlong’ Dungeon Thailand 🐉🇹🇭 (@XinlongDungeon) <a href="https://twitter.com/XinlongDungeon/status/2023744515895603341?ref_src=twsrc%5Etfw">February 17, 2026</a></blockquote> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<section class="section fan-section">
+  <!-- Row 1 -->
+  <img src="assets/img/support.png" class="video-img">
+  <div class="xiframe-wrapper">
+
+    <button class="xiframe-btn xiframe-btn-left">‹</button>
+    <button class="xiframe-btn xiframe-btn-right">›</button>
+
+    <div class="xiframe-viewport">
+      
+      <div class="xiframe-track">
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Shanghai Customized Fan Support Bus for Xinlong ✨️<br><br>Xinlong bus is so cute~ this bus route is round the vicinity of the signing event venue 🫶🏻<a href="https://t.co/OHToddFSsL">pic.twitter.com/OHToddFSsL</a></p>&mdash; 롱✰ (@xxinlongie) <a href="https://twitter.com/xxinlongie/status/2027238656369652161?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">LOOK AT THESE MASSIVE XINLONG SUPPORT ADS IN SHANGHAI CITY CENTRE 😭😭😭<br><br>I hope Xinlong can see how loved he is 😭😭😭<a href="https://twitter.com/ALD1_official?ref_src=twsrc%5Etfw">@ALD1_official</a> <a href="https://twitter.com/hashtag/%E9%91%AB%E9%9A%86?src=hash&amp;ref_src=twsrc%5Etfw">#鑫隆</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a><a href="https://t.co/AyDXuT0mPH">https://t.co/AyDXuT0mPH</a> <a href="https://t.co/VSZjDQoKjj">pic.twitter.com/VSZjDQoKjj</a></p>&mdash; eleventhree (@eleven3_ofive) <a href="https://twitter.com/eleven3_ofive/status/2027269266823930035?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/KDOL?src=hash&amp;ref_src=twsrc%5Etfw">#KDOL</a> March Birthday Ranking Results<a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> &#39;s ad draft has been confirmed.<br>(Location and schedule will be announced in the future)<a href="https://twitter.com/050311_250925?ref_src=twsrc%5Etfw">@050311_250925</a><br><br>Check KDOL rankings🔻🔻<a href="https://t.co/CRV7ZcBTAl">https://t.co/CRV7ZcBTAl</a><a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a><a href="https://twitter.com/XINLONGGLOBAL?ref_src=twsrc%5Etfw">@XINLONGGLOBAL</a> <a href="https://t.co/WcnQGicPRQ">pic.twitter.com/WcnQGicPRQ</a></p>&mdash; KDOL_Official (@kdol83996973) <a href="https://twitter.com/kdol83996973/status/2026871908256592276?ref_src=twsrc%5Etfw">February 26, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">&lt;3월 생일 아이돌&gt; 투표 최종 광고 시안 공개 <br>The final draft for &lt;March Birthday Idol&gt; vote<br><br>🏆 <a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a> 🏆<br><br>Location📍 홍대입구역 공항철도 디지털 샤이니지 (Hongik University Station Airport Railroad digital signage)<br>Period🗓 3/6 ~ 3/12 KST <a href="https://t.co/YfV6i4s4Cl">https://t.co/YfV6i4s4Cl</a> <a href="https://t.co/L83EzdKUYp">pic.twitter.com/L83EzdKUYp</a></p>&mdash; UPICK 유픽 (@UPICK_twt) <a href="https://twitter.com/UPICK_twt/status/2024392788062982257?ref_src=twsrc%5Etfw">February 19, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">中国粉丝后援会@贺鑫隆_LONGTimer和中国粉丝为鑫隆上海签售做的应援汇总（PS:个人总结，持更，侵删）：<br>P1 定制应援大巴✨<br>P2 商场应援大屏（×4）✨<br>P3 上海南京东路世纪广场8K巨屏✨<br><br>🔗<a href="https://t.co/bHbCW1o0bF">https://t.co/bHbCW1o0bF</a><br>🔗<a href="https://t.co/u9v25u9Vox">https://t.co/u9v25u9Vox</a><br>🔗<a href="https://t.co/OmVRS0Fna4">https://t.co/OmVRS0Fna4</a><a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/%ED%97%88%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#허씬롱</a> <a href="https://twitter.com/hashtag/%E3%82%B7%E3%83%B3%E3%83%AD%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#シンロン</a>… <a href="https://t.co/lTGxn6Pw6B">pic.twitter.com/lTGxn6Pw6B</a></p>&mdash; MOLI (@taogemajia) <a href="https://twitter.com/taogemajia/status/2026612974203601226?ref_src=twsrc%5Etfw">February 25, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">📢 광고 일정 &amp; 장소 확정 안내<a href="https://twitter.com/hashtag/%EC%95%8C%ED%8C%8C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%9B%90?src=hash&amp;ref_src=twsrc%5Etfw">#알파드라이브원</a> <a href="https://twitter.com/hashtag/%EC%94%AC%EB%A1%B1?src=hash&amp;ref_src=twsrc%5Etfw">#씬롱</a> <a href="https://twitter.com/hashtag/ALPHADRIVEONE?src=hash&amp;ref_src=twsrc%5Etfw">#ALPHADRIVEONE</a> <a href="https://twitter.com/hashtag/ALD1?src=hash&amp;ref_src=twsrc%5Etfw">#ALD1</a> <a href="https://twitter.com/hashtag/XINLONG?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG</a><br><br>📆일정 / Date : 2026/3/11<br>🚠위치 / Location : 뉴욕 타임스퀘어 I LOVE NY (NYTS I LOVE NY) <a href="https://t.co/uglOdkWOVx">pic.twitter.com/uglOdkWOVx</a></p>&mdash; 덕킹 THEKKING (@THEK___KING) <a href="https://twitter.com/THEK___KING/status/2026890322631078403?ref_src=twsrc%5Etfw">February 26, 2026</a></blockquote> 
+          </div>
+        </div>
+        
+        <div class="xiframe-page">
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">［📢］Kooky | Spotlight: 2026 Debut Rookie広告掲載情報<a href="https://twitter.com/hashtag/XINLONG_15thwin?src=hash&amp;ref_src=twsrc%5Etfw">#XINLONG_15thwin</a><br><br>🎂 ALD1 XINLONG Bday 江南バナー 🎉<br><br>シンロンくんのお誕生日を記念したバナー広告が江南に掲載されます✨<br><br>📅 2026年3月10日 - 3月17日<br>📍 Lighters Company<br>　ソウル特別市 江南区 狎鴎亭路2ギル 18… <a href="https://t.co/rMs1TgoCY7">https://t.co/rMs1TgoCY7</a> <a href="https://t.co/UKz2ifTFhn">pic.twitter.com/UKz2ifTFhn</a></p>&mdash; XINLONG JAPAN FB (@XinlongJP) <a href="https://twitter.com/XinlongJP/status/2027273213903073764?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote> 
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">［📢］お誕生日プロジェクトSTART‼️<br><br>.˚⊹⁺‧┈┈┈┈┈┈┈┈┈‧⁺ ⊹˚.<br> 𝐻𝐴𝑃𝑃𝑌 𝑋𝐼𝑁𝐿𝑂𝑁𝐺 𝐷𝐴𝑌<br>.˚⊹⁺‧┈┈┈┈┈┈┈┈┈‧⁺ ⊹˚.<br><br>2026年3月<br>シンロンくんのお誕生日をお祝いするための<br>BIRTHDAY PROJECTを準備しています🥰<br><br>ALD1としてデビューして初めてのお誕生日を… <a href="https://t.co/purWtT4Fuy">pic.twitter.com/purWtT4Fuy</a></p>&mdash; XINLONG JAPAN FB (@XinlongJP) <a href="https://twitter.com/XinlongJP/status/2022510607615037698?ref_src=twsrc%5Etfw">February 14, 2026</a></blockquote>
+          </div>
+          <div class="xcard">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">[🎂] XINLONG’S 21ST BIRTHDAY PROJECT<br><br>📣‼️ CALLING ALL HENYANGZ, LONGLONGDANS &amp; ALLYZ!!~<br><br>To celebrate Xinlong’s 21st birthday, XINLONG GLOBAL is opening a donation drive for XINLONG CBAR (贺鑫隆_LONGTimer)’s projects! In addition to large LED screens and birthday cafes across… <a href="https://t.co/LIZ5ykDziP">pic.twitter.com/LIZ5ykDziP</a></p>&mdash; HE XINLONG GLOBAL (@XINLONGGLOBAL) <a href="https://twitter.com/XINLONGGLOBAL/status/2025140985576219080?ref_src=twsrc%5Etfw">February 21, 2026</a></blockquote> 
+          </div>
+        </div>
+
+        
+          
+      </div>
+    </div>
+  </div>
+
+</section>
+<section class="section video-section">
+  
+  <img src="assets/img/videos.png" class="video-img">
   <!-- Row 2 -->
+   <div class="xiframe-wrapper">
+  
+  <div class="video-viewport">
+  
   <div class="video-row">
+    
     <img src="assets/img/performances.png" class="support-img">
-
-
-    <button class="video-nav prev">‹</button>
-    <button class="video-nav next">›</button>
-
     <div class="video-track">
       <div class="video-page">
         <div class="video-card">
@@ -228,45 +524,52 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/ED7cqlqzQlk?si=rbvOVIa-IErLbZlv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="video-card">
-          <iframe src="https://www.youtube.com/watch?v=ED7cqlqzQlk&list=RDED7cqlqzQlk&start_radio=1&pp=ygUSeGlubG9uZyBob2xhIHNvbGFyoAcB" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="video-page">
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mku2xdc1QIU?si=p96BnMh6sFj2sI8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
-
+  </div>
+  </div>
   <!-- Row 3 -->
+
+  <div class="xiframe-wrapper">
+  <button class="video-btn video-btn-left">‹</button>
+  <button class="video-btn video-btn-right">›</button>
+  
+  
+  <div class="video-viewport">
+    
   <div class="video-row">
+  
     <img src="assets/img/memories.png" class="support-img">
-
-
-    <button class="video-nav prev">‹</button>
-    <button class="video-nav next">›</button>
 
     <div class="video-track">
       <div class="video-page">
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_A" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_B" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_C" allowfullscreen></iframe>
-        </div>
+          <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IRKDjILl_y0?si=TSAQqkGvW8gB3nte" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xvPtJM9NU9I?si=arRcL22-7Wvh7Dky" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XaUwcjgH7EM?si=q147t9LLR7c3XfV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="video-page">
+          <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3QROT7qAH2Y?si=NIJTYre8sQADFmQP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yuirkneedWo?si=6sKjs2iLy4Zz2irm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EQCq1pH3iYA?si=9TSDzCG6GB9vwxI-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 </section>
 <!-- Message Section -->
@@ -299,29 +602,24 @@
   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=eWoGcKQZM-TZM8NtDR9LfZCTaOxXSzsB5EOh4_Gys2A&cl=ffffff&w=a"></script>
   </div>
 </section>
-</div>
-
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-content">
-    <button class="close-btn">&times;</button>
-    <button class="nav prev">&#10094;</button>
-    <img id="lightbox-img" src="" />
-    <button class="nav next">&#10095;</button>
+<section class="section name-section">
+  <div class="sign-sec">
+    <p class="sign">
+      built by
+      吸猫乃人之常情
+      热心网友冠军
+      月亮ww.</p>
   </div>
+</section></div>
+
 </div>
 
-<!--Scripts-->
-<script src="assets/js/path.js"></script>
-<script src="./assets/js/life.js"></script>
-<script src="./assets/js/video_row.js"></script>
-<!--Countdown logic-->
-<script src="./assets/js/countdown.js"></script>
-<!--Carousel logic-->
-<script src="./assets/js/carousel.js"></script>
-
-
+  <script src="./assets/js/countdown.js"></script>
+  <script src="./assets/js/carousel.js"></script>
+  <script src="./assets/js/life.js"></script>
+  <script src="./assets/js/xiframe.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </body>
 </html>
-
 
 
